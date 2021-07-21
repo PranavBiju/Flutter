@@ -1,6 +1,9 @@
+import 'dart:html';
+
+import 'package:biriyani/pages/login_page.dart';
 import "package:flutter/material.dart ";
 
-import 'home_page.dart';
+import 'pages/home_page.dart';
 
 
 void main(){
@@ -12,9 +15,16 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   int days= 50;
    
-    return MaterialApp(
-   home: HomePage());
-  }
+  return MaterialApp(
+       themeMode: ThemeMode.light,   
+       
+        
+       routes: {
+         "/" : (context) => HomePage(),
+          "/login": (context) => LoginPage() 
+         }
+       );
+       }
+       
 }
